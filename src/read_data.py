@@ -1,7 +1,8 @@
 import os
 import pandas as pd
+from pyprojroot import has_dir, find_root
 
-DATA_PATH = "C:\\Users\\kmkei\\Documents\\Projects\\food_waste\\data"
+DATA_PATH = os.path.join(find_root(has_dir(".git")), "data")
 
 
 def read_collections_data(dedup=True):
